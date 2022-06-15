@@ -60,6 +60,9 @@ class Profile(models.Model):
     def __str__(self) -> str:
         return f'{self.user.username} Profile'
 
+    def __str__(self) -> str:
+        return self.bio
+
 
 class NewPost(models.Model):
     image = models.ImageField(null=False, blank=False)
